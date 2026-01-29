@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Cascadia Mono', sans-serif;
+    font-size: 50%;
+    scroll-behavior: smooth;
+}
+:root {
+    --aqua: rgb(0, 200, 255);
+    --white: rgb(255, 255, 255);
+    --projectBackground: rgb(4, 0, 48);
+    --border: rgb(4, 0, 99);
+
+    --fs-h1: 6.5rem;
+    --fs-h2: 5.5rem;
+    --fs-h3: 4rem;
+
+    --gutter-underline: 0.5rem;
+    --gutter-xsmall: 2rem;
+    --gutter-small: 3rem;
+    --gutter-medium: 4rem;
+    --gutter-large: 6rem;
+    --gutter-xlarge: 10rem;
+    --gutter-sectionGap: 20rem;
+}
+header {
+    display: flex;
+    flex-direction:row-reverse;
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header.wrapper {
+    width: 100%;
+}
+body {
+    color:aquamarine;
+    font-size: 1.8rem;
+    font-weight: 300;
+    background-color:var(--projectBackground);
+    overflow-x: hidden;
+}
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+a {
+    color:var(--aqua);
+    text-decoration: none;
+}
+.wrapper {
+    max-width:  1080px;
+    margin: 0 auto;
+}
+@media(max-width: 135rem) {
+    .wrapper{
+        padding: 0 var(--gutter-large);
+    }
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5rem;
+    height: 8rem;
+}
+.header-text-box {
+    height:calc(100% - 9rem);
+    align-items: center;
+    display: flex;
+}
+.header-text-box p {
+    font-size: 2.4rem;
+    margin: 1rem 0 3rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid cyan;
+    font-size: 2rem;
+}
+.btn-text {
+    display: inline-block;
+    padding: var(--gutter-underline) 0.4rem;
+    border-bottom: 0.1rem solid var(--aqua);
+}
+.btn-noborder {
+    display: inline-block;
+    padding: 0.6rem 0.8rem;
+    font-size: 2rem;
+}
+section {
+    padding: var(--gutter-large) var(--gutter-large);
+    border: 0.2rem solid var(--border);
+}
+h1 {
+    color:cyan;
+    font-size: var(--fs-h1);
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    color: cyan;
+    font-weight: 400;
+    font-size: var(--fs-h2);
+}
+h2::after {
+    content: "";
+    display: inline;
+    border-bottom: 0.25rem solid darkcyan;
+}
+h3 {
+    font-size: var(--fs-h3);
+    margin-bottom: var(--gutter-medium);
+}
+ul {
+    padding-top: var(--gutter-small);
+    list-style-position: inside;
+}
+p {
+    max-width: 85rem;
+}
+#projects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 12.5%;
+    margin-right: 20rem;
+    padding-top: var(--gutter-large);
+}
+.project-box {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-xlarge);
+    margin-top: var(--gutter-xsmall);
+    margin-left: var(--gutter-small);
+    margin-right: var(--gutter-small);
+    width: 25%;
+    height: 25%;
+    padding: 1rem;
+}
+@media(max-width: 80rem) {
+    .project-box{
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+.project-box:not(:last-child) {
+    margin-bottom: var(--gutter-sectionGap);
+}
+.project-box-text > *::not() {
+    margin-top: var(--gutter-small);
+}
+.project-box-text-links {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-xlarge);
+}
+.project-box-image {
+    max-width: 72rem;
+    padding-bottom: 4rem;
+}
+@media(max-width: 80rem) {
+    .project-box-image{
+        max-width: 60rem;
+    }
+}
+@media(max-width: 80rem) {
+    .project-box-image{
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+.githubIcon {
+    padding-top: var(--gutter-small);
+    transition: all 0.3s;
+}
+.githubIcon:hover,
+.githubIcon:focus {
+    transform: scale(1.5);
+}
+.githubIcon img{
+    height: 2.5rem;
+}
+
+.aboutme-box {
+    display: flex;
+    align-items: center;
+    margin-left: var(--gutter-medium);
+    margin-top: var(--gutter-large);
+    gap: var(--gutter-xlarge);
+}
+.aboutme-imgbox {
+    flex: 0 0 45rem;
+}
+@media(max-width: 1350rem){
+    .aboutme-imgbox{
+        max-width: 50rem;
+    }
+}
+.aboutme-txtbox p {
+    margin-bottom: var(--gutter-small);
+}
+
+.link-img {
+    display: flex;
+    max-width: 14rem;
+    margin-top: var(--gutter-small);
+    text-align: center;
+    align-items: center;
+}
+.link-img a:not(:last-child) {
+    margin-right: var(--gutter-xsmall);
+}
+.link-img img {
+    filter: grayscale(100%) invert(100%) opacity(0.8);
+}
