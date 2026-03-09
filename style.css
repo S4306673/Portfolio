@@ -56,9 +56,10 @@ a {
     max-width:  1080px;
     margin: 0 auto;
 }
-@media(max-width: 135rem) {
+@media(max-width: 400rem) {
     .wrapper{
         padding: 0 var(--gutter-large);
+        max-width: 100%;
     }
 }
 nav {
@@ -124,13 +125,19 @@ ul {
 p {
     max-width: 85rem;
 }
-#projects {
+.projects {
     width: 100%;
     height: 100%;
     display: flex;
     margin-left: 12.5%;
     margin-right: 20rem;
     padding-top: var(--gutter-large);
+}
+@media(max-width: 48rem) {
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
 }
 .project-box {
     display: flex;
@@ -142,12 +149,6 @@ p {
     width: 25%;
     height: 25%;
     padding: 1rem;
-}
-@media(max-width: 80rem) {
-    .project-box{
-        flex-direction: column;
-        align-items: initial;
-    }
 }
 .project-box:not(:last-child) {
     margin-bottom: var(--gutter-sectionGap);
@@ -164,12 +165,12 @@ p {
     max-width: 72rem;
     padding-bottom: 4rem;
 }
-@media(max-width: 80rem) {
+@media(max-width: 48rem) {
     .project-box-image{
-        max-width: 60rem;
+        max-width: 30rem;
     }
 }
-@media(max-width: 80rem) {
+@media(max-width: 48rem) {
     .project-box-image{
         flex-direction: column;
         align-items: initial;
@@ -197,9 +198,9 @@ p {
 .aboutme-imgbox {
     flex: 0 0 45rem;
 }
-@media(max-width: 1350rem){
+@media(max-width: 48rem){
     .aboutme-imgbox{
-        max-width: 50rem;
+        max-width: 48rem;
     }
 }
 .aboutme-txtbox p {
