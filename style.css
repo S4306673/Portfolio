@@ -1,7 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 html {
     font-family: 'Cascadia Mono', sans-serif;
@@ -25,6 +23,8 @@ html {
     --gutter-large: 6rem;
     --gutter-xlarge: 10rem;
     --gutter-sectionGap: 20rem;
+
+    --phone-width: 48rem;
 }
 header {
     display: flex;
@@ -56,12 +56,6 @@ a {
     max-width:  1080px;
     margin: 0 auto;
 }
-@media(max-width: 400rem) {
-    .wrapper{
-        padding: 0 var(--gutter-large);
-        max-width: 100%;
-    }
-}
 nav {
     display: flex;
     justify-content: flex-end;
@@ -77,6 +71,11 @@ nav {
 .header-text-box p {
     font-size: 2.4rem;
     margin: 1rem 0 3rem;
+}
+@media(max-width: 48rem){
+    .header-text-box{
+        max-width: 100%;
+    }
 }
 .btn {
     display: inline-block;
@@ -126,16 +125,18 @@ p {
     max-width: 85rem;
 }
 .projects {
-    width: 100%;
+    width: 33%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     margin-left: 12.5%;
     margin-right: 20rem;
     padding-top: var(--gutter-large);
 }
-@media(max-width: 48rem) {
+@media(max-width: 480px) {
     .projects{
-        display: flex;
+        width: 100%;
+        margin: 0;
         flex-direction: column;
     }
 }
@@ -165,12 +166,12 @@ p {
     max-width: 72rem;
     padding-bottom: 4rem;
 }
-@media(max-width: 48rem) {
+@media(max-width: 480px) {
     .project-box-image{
         max-width: 30rem;
     }
 }
-@media(max-width: 48rem) {
+@media(max-width: 480px) {
     .project-box-image{
         flex-direction: column;
         align-items: initial;
@@ -198,7 +199,7 @@ p {
 .aboutme-imgbox {
     flex: 0 0 45rem;
 }
-@media(max-width: 48rem){
+@media(max-width: 480px){
     .aboutme-imgbox{
         max-width: 48rem;
     }
