@@ -197,7 +197,7 @@ p {
 .link-img img {
     filter: grayscale(100%) invert(100%) opacity(0.8);
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     .projects {
         grid-template-columns: 1fr;
         gap: var(--gutter-medium);
@@ -219,5 +219,10 @@ p {
     }
     .aboutme-imgbox{
         max-width: 100%;
+    }
+}
+@media (min-width: 500px){
+    .project {
+        grid-template-columns: repeat(3fr, 1);
     }
 }
