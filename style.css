@@ -67,15 +67,11 @@ nav {
     height:calc(100% - 9rem);
     align-items: center;
     display: flex;
+    margin-left: var(--gutter-medium);
 }
 .header-text-box p {
     font-size: 2.4rem;
     margin: 1rem 0 3rem;
-}
-@media(max-width: 48rem){
-    .header-text-box{
-        max-width: 100%;
-    }
 }
 .btn {
     display: inline-block;
@@ -127,6 +123,7 @@ p {
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
     gap: var(--gutter-large);
     width: 100%;
     margin: 0 auto;
@@ -219,10 +216,5 @@ p {
     }
     .aboutme-imgbox{
         max-width: 100%;
-    }
-}
-@media (min-width: 500px){
-    .project {
-        grid-template-columns: repeat(3fr, 1);
     }
 }
