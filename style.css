@@ -120,27 +120,22 @@ ul {
 p {
     max-width: 85rem;
 }
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: var(--gutter-medium);
-    grid-auto-rows: 100px;
-    grid-template-areas: "a b c";
-    align-items: start;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: var(--gutter-large);
+    padding: 20px 0;
+    flex-wrap: wrap;
 }
 .project-box {
+    flex: 1;
+    max-width: 35rem;
+    min-width: 28rem;
+    padding: 15px;
+    border-radius: 8px;
     display: flex;
-    align-items: center;
-    gap: var(--gutter-xlarge);
-    margin-top: var(--gutter-xsmall);
-    margin-left: var(--gutter-small);
-    margin-right: var(--gutter-small);
-    width: 25%;
-    height: 25%;
-    padding: 1rem;
+    flex-direction: column;
 }
 .project-box:not(:last-child) {
     margin-bottom: var(--gutter-sectionGap);
@@ -154,7 +149,9 @@ p {
     gap: var(--gutter-xlarge);
 }
 .project-box-image {
-    max-width: 72rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
     padding-bottom: 4rem;
 }
 .githubIcon {
@@ -194,28 +191,4 @@ p {
 }
 .link-img img {
     filter: grayscale(100%) invert(100%) opacity(0.8);
-}
-@media (min-width: 480px) {
-    .projects {
-        grid-template-columns: 1fr;
-        gap: var(--gutter-medium);
-    }
-    .project-box {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        gap: 1rem;
-    }
-    .project-box-image{
-        max-width: 100%;
-        padding-bottom: 2rem;
-    }
-    .aboutme-box {
-        flex-direction: column;
-        margin-left: 0;
-        gap: var(--gutter-medium);
-    }
-    .aboutme-imgbox{
-        max-width: 100%;
-    }
 }
