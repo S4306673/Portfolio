@@ -132,27 +132,64 @@ p {
     flex: 1;
     max-width: 35rem;
     min-width: 28rem;
+    height: auto;
     padding: 15px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s;
+    border: 2px solid transparent;
 }
-.project-box:not(:last-child) {
-    margin-bottom: var(--gutter-sectionGap);
+.project-box:hover {
+    transform: sacle(1.05);
+    border-color: var(--aqua);
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.6);
+    background-color: rgba(4, 0, 99, 0.3);
 }
-.project-box-text > *::not() {
-    margin-top: var(--gutter-small);
+.project-box-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
 }
 .project-box-text-links {
+    margin-top: auto;
     display: flex;
     align-items: center;
-    gap: var(--gutter-xlarge);
 }
 .project-box-image {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     padding-bottom: 4rem;
+}
+.project-detail-box {
+    max-width: 108rem;
+    margin: var(--gutter-large) auto;
+    padding: 4rem;
+    border: 0.2rem solid var(--border);
+    background-color: rgba(4, 0, 99, 0.2);
+}
+.about-project-heading {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: 400;
+    margin-top: 4rem;
+    border-bottom: 0.1rem solid;
+}
+.about-project-subheading {
+    display: inline-block;
+    margin-top: 8rem;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 300;
+    padding-bottom: 4rem;
+}
+.about-project {
+    display: flex;
+    font-size: medium;
+    padding: 5rem;
 }
 .githubIcon {
     padding-top: var(--gutter-small);
